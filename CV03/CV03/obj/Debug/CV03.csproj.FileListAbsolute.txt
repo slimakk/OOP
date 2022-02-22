@@ -1,0 +1,8 @@
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\bin\Debug\CV03.exe.config
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\bin\Debug\CV03.exe
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\bin\Debug\CV03.pdb
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\obj\Debug\CV03.csproj.AssemblyReference.cache
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\obj\Debug\CV03.csproj.SuggestedBindingRedirects.cache
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\obj\Debug\CV03.csproj.CoreCompileInputs.cache
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\obj\Debug\CV03.exe
+C:\Users\miros\Desktop\Skola\OOP\CV03\CV03\obj\Debug\CV03.pdb
