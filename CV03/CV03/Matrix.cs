@@ -147,7 +147,7 @@ namespace CV03
                 }
                 return determinant;
             }
-            else
+            elseb
             {
                 throw new Exception("Incorrect matrix dimensions");
             }
