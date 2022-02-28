@@ -19,6 +19,26 @@ namespace CV04
             Console.WriteLine("Pocet slov {0} ", test.WordCounter());
             Console.WriteLine("Pocet riadkov {0}", test.LineCounter());
             Console.WriteLine(test.SentenceCounter());
+            Console.WriteLine("Najdlhsie slova: ");
+            for(int i = 0;i < test.LongestWords().Length; i++)
+            {
+                Console.WriteLine(test.LongestWords()[i]);
+            }
+            Console.WriteLine("Najkratsie slova: ");
+            for (int i = 0; i < test.ShortestWords().Length; i++)
+            {
+                Console.WriteLine(test.ShortestWords()[i]);
+            }
+            Console.WriteLine("Najpocetnejsie slova");
+            for (int i = 0; i < test.FrequentWords().Length; i++)
+            {
+                Console.WriteLine(test.FrequentWords()[i]);
+            }
+            Console.WriteLine("Podla abecedy: ");
+            for (int i = 0; i < test.AlphabeticalOrder().Length; i++)
+            {
+                Console.Write("{0}, ",test.AlphabeticalOrder()[i]);
+            }
             Console.ReadLine();
         }
     }

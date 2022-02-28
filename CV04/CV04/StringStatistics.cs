@@ -45,18 +45,99 @@ namespace CV04
             }
             return sentenceCounter;
         }
-        public string[] longestWords ()
+        public string[] LongestWords ()
         {
-            int longestWords = 0;
-            string[] wordArray = Regex.Split(str, @"\n|\s*\W");
-            foreach(string word in wordArray)
+            int i = 0;
+            char[] splitters = new char[] { ' ', '.', ',', ';', '!', '?', '\n' };
+            string[] wordArray = str.Split(splitters, StringSplitOptions.RemoveEmptyEntries);
+            Array.Sort (wordArray, (x1, x2) => x2.Length.CompareTo(x1.Length));
+            int maxLength = wordArray[0].Length;
+            foreach (string word in wordArray)
             {
-                int i = word.Length;
-                if (i > longestWords)
+                int length = word.Length;
+                if(length >= maxLength)
                 {
-
+                    i++;
                 }
             }
+            string[] longestWords = new string[i];
+            for (int j = 0; j < longestWords.Length; j++)
+            {
+                longestWords[j] = wordArray[j];
+            }
+            return longestWords;
+        }
+        public string[] ShortestWords()
+        {
+            int i = 0;
+            char[] splitters = new char[] { ' ', '.', ',', ';', '!', '?', '\n' };
+            string[] wordArray = str.Split(splitters, StringSplitOptions.RemoveEmptyEntries);
+            Array.Sort(wordArray, (x1, x2) => x1.Length.CompareTo(x2.Length));
+            int minLength = wordArray[0].Length;
+            foreach (string word in wordArray)
+            {
+                int length = word.Length;
+                if (length <= minLength)
+                {
+                    i++;
+                }
+            }
+            string[] shortestWords = new string[i];
+            for (int j = 0; j < shortestWords.Length; j++)
+            {
+                shortestWords[j] = wordArray[j];
+            }
+            return shortestWords;
+        }
+        public string[] AlphabeticalOrder()
+        {
+            char[] splitters = new char[] { ' ', '.', ',', ';', '!', '?', '\n' };
+            string[] wordArray = str.Split(splitters, StringSplitOptions.RemoveEmptyEntries);
+            Array.Sort(wordArray, (x1, x2) => x1.Length.CompareTo(x2.Length));
+            return wordArray;
+        }
+        public string[] FrequentWords ()
+        {
+            char[] splitters = new char[] { ' ', '.', ',', ';', '!', '?', '\n' };
+            string[] wordArray = str.Split(splitters, StringSplitOptions.RemoveEmptyEntries);
+            var frequency = new Dictionary<string, int>();
+            int cases = 0;
+            foreach (string word in wordArray)
+            {
+                int count;
+                frequency.TryGetValue(word, out count);
+                count++;
+                frequency[word] = count;
+            }
+            string mostFrequent = null;
+            foreach (var pair in frequency)
+            {
+                if(pair.Value > cases)
+                {
+                    cases = pair.Value;
+                    mostFrequent = pair.Key;
+                }
+            }
+            int maxCases = frequency.Values.Max();
+            int i = 0;
+            int j = 0;
+            foreach (var pair in frequency)
+            {
+                if (pair.Value == maxCases)
+                {
+                    i++;
+                }
+            }
+            string[] frequentWords = new string[i];
+            foreach (var pair in frequency)
+            {
+                if (pair.Value == maxCases)
+                {
+                    frequentWords[j] = pair.Key;
+                    j++;
+                }
+            }
+            return frequentWords;
         }
     }
 }
