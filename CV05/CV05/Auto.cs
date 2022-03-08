@@ -9,8 +9,9 @@ namespace CV05
     class Auto
     {
         protected int velikostNadrze;
-        protected int stavNadrze;
+        protected double stavNadrze;
         protected TypPaliva Palivo;
+        private Autoradio radio = new Autoradio(false, 1);
         public enum TypPaliva
         {
             Benzin,
@@ -19,33 +20,57 @@ namespace CV05
         public int VelikostNadrze
         {
             get { return velikostNadrze; }
-            set { velikostNadrze = value; }
+            protected set { velikostNadrze = value; }
         }
         public TypPaliva palivo
         {
             get { return Palivo; }
-            set { Palivo = value; }
+            protected set { Palivo = value; }
         }
-        public int StavNadrze
+        public double StavNadrze
         {
             get { return stavNadrze; }
-            set { stavNadrze = value; }
+            set {
+                if (value > VelikostNadrze)
+                    throw new ArgumentException("Nadrz preteka");
+                stavNadrze = value; }
         }
-        public Auto(int stavPaliva, TypPaliva palivo)
+        public Auto(double stavPaliva, TypPaliva palivo, int velkostNadrze)
         {
-            stavNadrze = stavPaliva;
+            VelikostNadrze=velkostNadrze;
+            StavNadrze = stavPaliva;
             this.palivo = palivo;
         }
         public void Natankuj (TypPaliva palivo, int mnozstvo)
         {
-            if(stavNadrze+mnozstvo <= VelikostNadrze && this.Palivo == palivo )
+            if(StavNadrze+mnozstvo <= VelikostNadrze && Palivo == palivo )
             {
-                stavNadrze += mnozstvo;
+                StavNadrze += mnozstvo;
             }
             else
             {
                 throw new Exception("Zle palivo");
             }
+        }
+        public void ZapniRadio()
+        {
+            radio.RadioZapnute=true;
+        }
+        public void VypniRadio()
+        {
+            radio.RadioZapnute = false;
+        }
+        public void Prelad(int predvolba)
+        {
+            radio.PreladNaPredvolbu(predvolba);
+        }
+        public void NastavRadio(int predvolba, double kmitocet)
+        {
+            radio.NastavPredvolbu(predvolba, kmitocet);
+        }
+        public string StavRadia()
+        {
+            return radio.ToString();
         }
     }
 }

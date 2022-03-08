@@ -10,31 +10,28 @@ namespace CV05
     {
         private int maxOsob;
         private int prepravovaneOsoby;
-        public Osobni(TypPaliva AktPalivo, int stavNadrze, int prepravovane = 0) : base(stavNadrze, AktPalivo)
+        public Osobni(TypPaliva AktPalivo, double stavNadrze, int velkostNadrze, int maxOsoby = 1,int prepravovane = 0) : base(stavNadrze, AktPalivo, velkostNadrze)
         {
-            maxOsob = 5;
-            VelikostNadrze = 50;
-            if (prepravovane <= maxOsob)
-            {
-                prepravovaneOsoby = prepravovane;
-            }
-            else
-            {
-                throw new Exception("Pocet prepravovanych osob presahuje maximalny pocet osob");
-            }
-            if( stavNadrze <= VelikostNadrze)
-            {
-                palivo = AktPalivo;
-            }
-            else
-            {
-                throw new Exception("Zadane mnozstvo paliva prevysuje objem nadrze");
-            }
+            MaxOsob = maxOsoby;
+            PrepravovaneOsoby = prepravovane;
+        }
+        public int MaxOsob
+        { 
+            get { return maxOsob; } 
+            private set { maxOsob = value; } 
+        }
+        public int PrepravovaneOsoby
+        {
+            get { return prepravovaneOsoby; }
+            protected set {
+                if (value > MaxOsob)
+                    throw new ArgumentException("Naozaj chces jazdit ako Weiss?");
+                prepravovaneOsoby = value; }
         }
 
         public override string ToString()
         {
-            return String.Format("Pocet osob:{0} Natankovane palivo: {1} {2} L", prepravovaneOsoby,palivo, StavNadrze);
+            return String.Format("{0}\nPocet osob:{1} Natankovane palivo: {2} {3} L \n{4}", "Auto",PrepravovaneOsoby,Palivo, StavNadrze,StavRadia());
         }
     }
 }
