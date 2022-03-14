@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="GrObjekt.cs" />
     <Compile Include="Kruh.cs" />
+    <Compile Include="Obdelnik.cs" />
     <Compile Include="Objekt2D.cs" />
     <Compile Include="Objekt3D.cs" />
     <Compile Include="Program.cs" />
