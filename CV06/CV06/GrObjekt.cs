@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CV06
 {
-    public abstract class GrObjekt
+    internal interface GrObjekt
     {
-        public abstract void Kresli();
+        void Kresli();
     }
 }

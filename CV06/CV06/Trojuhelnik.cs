@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace CV06
 {
-    internal class Obdelnik : Objekt2D
+    internal class Trojuhelnik : Objekt2D
     {
         private double a;
-        private double b;
-        public Obdelnik(double a, double b)
+        private double v_a;
+        public Trojuhelnik(double a, double v)
         {
-            this.a = a; this.b = b;
+            this.a = a; this.v_a = v;
         }
         public void Kresli()
         {
-            Console.WriteLine("Obdlznik (sirka = {0} vyska = {0}",a,b);
+            Console.WriteLine("Trojuholnik (strana a = {0} vyska na stranu a = {1})", a, v_a);
         }
 
         public double SpoctiPlochu()
         {
-            return a * b;
+            return (a * v_a) / 2;
         }
     }
 }

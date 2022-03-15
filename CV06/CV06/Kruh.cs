@@ -9,18 +9,18 @@ namespace CV06
     internal class Kruh : Objekt2D
     {
         private double r;
-        public Kruh(double r)
+        public Kruh(int r)
         {
             this.r = r;
         }
-        public double R { get { return r; } }
-        public override double SpoctiPlochu()
+        public void Kresli()
         {
-            return 3.14 * R * R;
+            Console.WriteLine("Kruh (r = {0})",r);
         }
-        public override void Kresli ()
+
+        public double SpoctiPlochu()
         {
-            Console.WriteLine("Kruh (r = {0})", R);
+            return 3.14 * r * r;
         }
     }
 }

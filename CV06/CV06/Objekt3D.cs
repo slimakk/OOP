@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CV06
 {
-    abstract class Objekt3D : GrObjekt
+    interface Objekt3D : GrObjekt
     {
-        public abstract double SpoctiPovrch();
-        public abstract double SpoctiObjem();
+        double SpoctiPovrch();
+        double SpoctiObjem();
+        //void Kresli();
     }
 }

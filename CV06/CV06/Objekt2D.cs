@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CV06
 {
-    public abstract class Objekt2D : GrObjekt
+    interface Objekt2D : GrObjekt
     {
-        public abstract double SpoctiPlochu();
+        double SpoctiPlochu();
+        //void Kresli();
     }
 }
