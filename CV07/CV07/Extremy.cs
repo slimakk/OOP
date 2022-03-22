@@ -10,27 +10,11 @@ namespace CV07
     {
         public static T Najvacsia<T>(params T[] plochy) where T : IComparable
         {
-            T max = plochy[0];
-            for(int i = 1; i < plochy.Length; i++)
-            {
-                if(plochy[i].CompareTo(max) > 0)
-                {
-                    max = plochy[i];
-                }
-            }
-            return max;
+            return plochy.Max();
         }
         public static T Najmensia<T>(params T[] plochy) where T : IComparable
         {
-            T min = plochy[0];
-            for(int i = 1; i < plochy.Length; i++)
-            {
-                if(plochy[i].CompareTo(min) < 0)
-                {
-                    min = plochy[i];
-                }
-            }
-            return min;
+            return plochy.Min();
         }
     }
 }

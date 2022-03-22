@@ -12,17 +12,15 @@ namespace CV07
 
         public int CompareTo(object obj)
         {
-            if(this.Plocha() > ((Objekt2D)obj).Plocha())
+            if(obj is Objekt2D)
             {
-                return 1;
-            }
-            else if(this.Plocha() < ((Objekt2D)obj).Plocha())
-            {
-                return -1;
+                var first = Plocha();
+                var second = ((Objekt2D)obj).Plocha();
+                return first.CompareTo(second);
             }
             else
             {
-                return 0;
+                throw new Exception("Neporovnatelne");
             }
         }
     }
