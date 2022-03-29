@@ -13,7 +13,12 @@ namespace CV08
             ArchivTeplot teploty = new ArchivTeplot();
             teploty.Load(@"teploty.txt");
             teploty.TiskTeplot();
-            
+            teploty.Kalibracia(-0.1);
+            teploty.TiskTeplot();
+            teploty.Vyhladaj(2011);
+            teploty.TiskPriemernychRocnychTeplot();
+            teploty.TiskPriemernychMesacnychTeplot();
+            teploty.Save(@"teploty1.txt");
             Console.ReadLine();
         }
     }

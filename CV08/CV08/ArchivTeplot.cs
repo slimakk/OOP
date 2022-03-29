@@ -59,7 +59,18 @@ namespace CV08
         }
         public void Vyhladaj(int rok)
         {
-            
+            Console.WriteLine("Hladam: {0}", rok);
+            if (_archiv.ContainsKey(rok))
+            {
+                Console.Write("{0}: ", rok);
+                for (int i = 0; i < _archiv[rok].MesacneTeploty.Count; i++)
+                {
+                    Console.Write("{0}; ", _archiv[rok].MesacneTeploty[i]);
+                }
+                Console.WriteLine();
+            }
+            else
+                Console.WriteLine("Nenasiel som");
         }
         public void TiskTeplot()
         {
@@ -72,6 +83,32 @@ namespace CV08
                     Console.Write("{0}; ", value.MesacneTeploty[i]);
                 }
                 Console.WriteLine();
+            }
+        }
+        public void TiskPriemernychRocnychTeplot()
+        {
+            Console.WriteLine("Priemerne rocne teploty");
+            foreach(var value in _archiv.Values)
+            {
+                Console.WriteLine("{0}: {1:0.0}", value.Rok, value.PriemerTeplota);
+            }
+            //Console.WriteLine();
+        }
+        public void TiskPriemernychMesacnychTeplot()
+        {
+            double[] mesacnyPriemer = new double[12];
+            foreach (var value in _archiv.Values)
+            {
+                for(int i = 0; i < value.MesacneTeploty.Count; i++)
+                {
+                    mesacnyPriemer[i] += value.MesacneTeploty[i];
+                }
+            }
+            Console.Write("Priemer: ");
+            for(int i = 0; i < mesacnyPriemer.Length; i++)
+            {
+                mesacnyPriemer[i] = mesacnyPriemer[i] / _archiv.Count;
+                Console.Write("{0:0.0}; ", mesacnyPriemer[i]);
             }
         }
     }
