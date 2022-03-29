@@ -49,6 +49,7 @@ namespace CV08
         }
         public void Kalibracia(double offset)
         {
+            Console.WriteLine("Kalibrujem..");
             foreach (var temp in _archiv.Values)
             {
                 for(int i = 0; i < temp.MesacneTeploty.Count;i++)
