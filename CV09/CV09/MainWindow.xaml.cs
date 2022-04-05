@@ -20,14 +20,19 @@ namespace CV09
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Calculator calc = new Calculator();
         public MainWindow()
         {
             InitializeComponent();
+            display.Text = calc.Display;
+            pamat.Text = calc.Pamet;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            calc.Tlacitko((sender as Button).Content.ToString());
+            display.Text = calc.Display;
+            pamat.Text = calc.Pamet;
         }
     }
 }

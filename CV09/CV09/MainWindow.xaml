@@ -24,29 +24,31 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button0" Content="0" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Click="button_Click" Width="140" Grid.ColumnSpan="2" Height="42" FontSize="20"/>
-        <Button x:Name="buttonPoint" Grid.Column="2" Content="," HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="button1" Content="1" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="button2" Content="2" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1"/>
-        <Button x:Name="button3" Content="3" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2"/>
-        <Button x:Name="button4" Content="4" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="button5" Content="5" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1"/>
-        <Button x:Name="button6" Content="6" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2"/>
-        <Button x:Name="button7" Content="7" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="button8" Content="8" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1"/>
-        <Button x:Name="button9" Content="9" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2"/>
-        <Button x:Name="buttonPlus" Grid.Column="3" Content="+" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonMinus" Grid.Column="3" Content="-" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonMultiply" Grid.Column="3" Content="*" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonDivide" Grid.Column="3" Content="/" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonFraction" Content="1/x" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonCE" Content="CE" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1"/>
-        <Button x:Name="buttonC" Content="C" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2"/>
-        <Button x:Name="buttonModulo" Grid.Column="3" Content="%" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonMC" Content="MC" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonMR" Content="MR" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1"/>
-        <Button x:Name="buttonMS" Content="MS" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2"/>
-        <Button x:Name="buttonM_Plus" Grid.Column="3" Content="M+" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <Button x:Name="buttonM_Minus" Grid.Column="4" Content="M-" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20"/>
-        <TextBox x:Name="display" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="333" Height="42" Grid.ColumnSpan="5" Margin="27,0,0,0" FontSize="24" TextAlignment="Center" IsReadOnly="true"/>
+        <Button x:Name="buttonPoint" Grid.Column="2" Content="," HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1" Click="button_Click"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2" Click="button_Click"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1" Click="button_Click"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2" Click="button_Click"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1" Click="button_Click"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2" Click="button_Click"/>
+        <Button x:Name="buttonPlus" Grid.Column="3" Content="+" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonMinus" Grid.Column="3" Content="-" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonMultiply" Grid.Column="3" Content="*" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Padding="0,1,1,1" Click="button_Click"/>
+        <Button x:Name="buttonDivide" Grid.Column="3" Content="/" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonRemove" Content="&lt;-" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonCE" Content="CE" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1" Click="button_Click"/>
+        <Button x:Name="buttonC" Content="C" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2" Click="button_Click"/>
+        <Button x:Name="buttonModulo" Grid.Column="3" Content="%" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonMC" Content="MC" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonMR" Content="MR" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="1" Click="button_Click"/>
+        <Button x:Name="buttonMS" Content="MS" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Grid.Column="2" Click="button_Click"/>
+        <Button x:Name="buttonM_Plus" Grid.Column="3" Content="M+" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonM_Minus" Grid.Column="4" Content="M-" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="42" Width="60" FontSize="20" Click="button_Click"/>
+        <Button x:Name="buttonEquals" Grid.Column="4" Content="=" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="104" Width="60" FontSize="20" Grid.RowSpan="2" Click="button_Click"/>
+        <TextBlock x:Name="display" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.421,0.224" Grid.ColumnSpan="3" Width="211" Height="42"  Grid.Column="2" FontSize="20" TextAlignment="Right"/>
+        <TextBlock x:Name="pamat" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="70" />
     </Grid>
 </Window>
